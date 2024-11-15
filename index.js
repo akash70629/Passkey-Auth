@@ -5,7 +5,13 @@ const PORT = 3000;
 app.use(express.static('./public'));
 app.use(express.json());
 
+//States
+const userStore = {}
 
+// app.post('/register', (req, res) => {
+//     const {usernsme, password} = req.body;
+//     const id = `${Date.now()}'
+// })
 
 
 
