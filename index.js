@@ -8,10 +8,24 @@ app.use(express.json());
 //States
 const userStore = {}
 
-// app.post('/register', (req, res) => {
-//     const {usernsme, password} = req.body;
-//     const id = `${Date.now()}'
-// })
+app.post('/register', (req, res) => {
+    const {usernsme, password} = req.body;
+    const id = `${Date.now()}`
+
+
+    const user = {
+        usernsme,
+        password,
+        id
+    }
+
+    userStore[id] = user;
+
+    console.log(`Register Success`);
+
+    return res.json({id})
+
+})
 
 
 
